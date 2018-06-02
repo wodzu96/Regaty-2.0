@@ -36,3 +36,10 @@ void BoatImage::draw(RenderTarget& target, RenderStates state) const{
     target.draw(this->polygon, state);
     target.draw(this->sail, state);
 }
+void BoatImage::update(float X, float Y, float rotate, float sailRotation){
+    polygon.setRotation(rotate);
+    polygon.setPosition(X, Y);
+    
+    sail.setRotation(rotate+sailRotation);
+    sail.setPosition(X, Y);
+}

@@ -18,6 +18,7 @@ public:
     BoatImage(float X, float Y, float rotate, float sailRotation);
     BoatImage() = delete;
     ~BoatImage() = default;
+    void update(float X, float Y, float rotate, float sailRotation);
 private:
     ConvexShape polygon;
     ConvexShape sail;

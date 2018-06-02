@@ -7,3 +7,12 @@
 //
 
 #include "BuoyImage.hpp"
+
+BuoyImage::BuoyImage(float X, float Y){
+    shape.setRadius(buoyRadious);
+    shape.setFillColor(Color::White);
+    shape.setPosition(X, Y);
+}
+void BuoyImage::draw(RenderTarget& target, RenderStates state) const{
+    target.draw(this->shape, state);
+}
